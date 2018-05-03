@@ -116,18 +116,20 @@ void RandomWord()
 
 int main(int argc, char* argv[])
 {
-	switch (GetCommand())
+	while(1)
 	{
-	case 1:
-		DefineWord();
-		break;
-	case 2:
-		RandomWord();
-		break;
-	default:
-		std::cout << "Command not recognized\n";
-		GetCommand();
-		break;
+		switch (GetCommand())
+		{
+		case 1:
+			DefineWord();
+			return 0;
+		case 2:
+			RandomWord();
+			return 0;
+		default:
+			std::cout << "Command not recognized\n";
+			break;
+		}
 	}
 	return 0;
 }
